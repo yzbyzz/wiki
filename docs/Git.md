@@ -152,7 +152,7 @@ git push --tags
 
 ### 分支
 
-### 推拉
+#### 推拉
 
 ```shell
 git fetch/pull/push origin REMOTE_BRANCH:LOCAL_REMOVE
@@ -162,7 +162,7 @@ git fetch/pull/push origin REMOTE_BRANCH:LOCAL_REMOVE
 - pull
 - Push
 
-### 建立联系
+#### 建立联系
 
 ```
 git branch --set-upstream-to=origin/dev dev
