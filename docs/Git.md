@@ -33,6 +33,11 @@ git config --show-origin --get user.email
 git config core.ignorecase false
 ```
 
+### 忽略行末换行符
+```sheshellll
+git config --global core.whitespace cr-at-eol
+```
+
 ### 配置使用 HTTP 协议时的账号密码
 
 - 让 git 记住密码 `git config credential.helper store`
