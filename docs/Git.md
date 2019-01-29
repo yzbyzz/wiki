@@ -10,12 +10,13 @@ git config --show-origin --get user.email
 
 ### 免密操作
 
-- 生成ssh密钥 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+#### SSH
+- 生成 ssh 密钥 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 - 启动 ssh-agent `ssh-agent -s`
 - 添加密钥到 ssh-agent `ssh-add ~/.ssh/id_rsa`
 - 将密钥添加到 Git 站点（GitHub、gitee、gogs...）设置面板
 - 验证连接 `ssh -T git@your-git-server-domain`
-- 修改密钥密码  ``` ssh-keygen -p`
+- 修改密钥密码  `ssh-keygen -p`
 - 切换现有Git仓库地址
 
     ```shell
@@ -27,6 +28,27 @@ git config --show-origin --get user.email
     git@git.oschina.net:yzbyzz/hx_book_spider.g 
     ```
 
+#### HTTP
+
+- 让 git 记住密码 `git config credential.helper store`
+
+- 首次 pull、push 仓库时，会提示输入账号密码
+
+- 密码的保存位置
+
+    - Linux/macOS 保存在 `~/.git-credentials`。每个网站用单独一行来记住密码，格式如下
+
+    ```shell
+    http://user:pass@example.com
+    http://username%40company.com:abcdef@gogs.huxiao.com
+    (username@company.com  abcdef)
+    （邮箱使用 base64 编码。密码是否使用待定。）
+    ```
+
+    - Windows7、Windows10 搜索凭证管理器并设置正确的账号密码
+
+       [参考链接](https://blog.csdn.net/qq_34665539/article/details/80408282)
+
 ### 区分文件大小写
 
 ```sheshellll
@@ -37,27 +59,6 @@ git config core.ignorecase false
 ```sheshellll
 git config --global core.whitespace cr-at-eol
 ```
-
-### 配置使用 HTTP 协议时的账号密码
-
-- 让 git 记住密码 `git config credential.helper store`
-
-- 首次 pull、push 仓库时，会提示输入账号密码
-
-- 密码的保存位置
-
-    - 存到 `~/.git-credentials`。每个网站用单独一行来记住密码，格式如下
-
-    ```shell
-    http://user:pass@example.com
-    http://qingzhi%40hoosho.com:abcdef@gogs.huxiao.com
-    (qingzhi@hoosho.com  abcdef)
-    （邮箱使用 base64 编码。密码是否使用待定。）
-    ```
-
-    - Windows7、Windows10 搜索凭证管理器并设置正确的账号密码
-
-       [参考链接](https://blog.csdn.net/qq_34665539/article/details/80408282)
 
 ### 不同目录使用不同的用户名、邮箱
 
