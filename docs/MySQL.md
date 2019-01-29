@@ -22,11 +22,13 @@
 `net start mysql`
 
 - 登录并设置密码
+
 ```
-mysql -uroot -p
 # 不用输入密码，直接回车
+mysql -uroot -p
 
 use mysql;
+
 # 查看已有的用户
 select host,user,authentication_string from user;
 
