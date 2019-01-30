@@ -24,8 +24,8 @@ git config --show-origin --get user.email
     git remote set-url origin your-git-repository-address 
 
     url sample：
-    https://git.oschina.net/yzbyzz/hx_book_spider.git
-    git@git.oschina.net:yzbyzz/hx_book_spider.g 
+    https://git.oschina.net/yzbyzz/repository.git
+    git@git.oschina.net:yzbyzz/repository.g 
     ```
 
 #### HTTP
@@ -45,7 +45,7 @@ git config --show-origin --get user.email
     （邮箱使用 base64 编码。密码是否使用待定。）
     ```
 
-    - Windows7、Windows10 搜索凭证管理器并设置正确的账号密码
+    - Windows7、Windows10 搜索`凭证管理器`并设置正确的账号密码
 
        [参考链接](https://blog.csdn.net/qq_34665539/article/details/80408282)
 
