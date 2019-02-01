@@ -1,7 +1,7 @@
 
-## ssh
+## SSH
 
-- 生成 ssh 密钥 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+- 生成 SSH 密钥 `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 - [可选]启动 ssh-agent `ssh-agent -s`
 - [可选]添加密钥到 ssh-agent `ssh-add ~/.ssh/id_rsa`
   > 如果生成 rsa 时指定了密码，则在添加后无需每次都输入密码。
@@ -11,7 +11,7 @@
 - 验证连接 `ssh -T git@your-server-domain`
 - 修改密钥密码  `ssh-keygen -p`
 
-## putty
+## PuTTY
 
 - 将 `id_rsa` 转成 `ppk` 格式
   - 打开 puttygen
@@ -23,3 +23,9 @@
   - 打开 puttygen
   - 点击 `Generate`，移动鼠标来生成 `ppk`
   - 点击 `Save public key`、 `Save private key` 生成 `putty.pub`、`putty.ppk`
+
+
+## ref
+- [下载 PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/)
+- [
+Use SSH Keys With PuTTY On Windows](https://devops.ionos.com/tutorials/use-ssh-keys-with-putty-on-windows/)
