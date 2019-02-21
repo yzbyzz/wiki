@@ -1,5 +1,4 @@
 
-* [首页](/)
 
 - 后端
   - [Java](Java)
@@ -7,6 +6,11 @@
   - [MySQL](MySQL)
   - Gradle
   - Maven
+  - Redis
+  - MonogoDB
+  - Message Queue
+  - 
+
 - 其他
   - [Git](Git)
   - [秘钥](Key)
