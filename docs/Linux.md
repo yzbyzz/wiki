@@ -21,6 +21,7 @@
   - 主要包括
     - `mail.cf`：是 postfix 主要的配置文件。
       - `inet_interfaces`：指定邮件系统接收的邮件的网络地址。不在指定范围内的邮件不会接收。
+      - `inet_protocols`: 使用的网络协议，取值为 `ipv4`/`ipv6`/`all`。
       - ...
     - `master.cf`：是 postfix 的 master 进程的配置文件，该文件中的每一行都是用来配置 postfix 的组件进程的运行方式。
     - ...
@@ -46,6 +47,8 @@
 - 修改
   - 直接编辑 `/var/spool/cron/USER` 文件
   - 使用 `crontab -e`
+- 执行的命令，如有输出到 stdout、stderr，相应的输出会通过邮件发送给用户。
+- 如果命令有输出，但是却没有发送邮件，很可能是 crontab 或者 mail 的设置有问题。
 
 ### Ref
 
