@@ -1,15 +1,18 @@
-- 后端
+- 编程语言
 
   - [Java](Java)
   - Spring
-  - [MySQL](MySQL)
   - Gradle
   - Maven
+
+- 存储
+
+  - [MySQL](MySQL)
   - Redis
   - MonogoDB
   - Message Queue
-  - [Linux](Linux)
 
 - 其他
+  - [Linux](Linux)
   - [Git](Git)
   - [秘钥](Key)
