@@ -1,6 +1,5 @@
-
-
 - 后端
+
   - [Java](Java)
   - Spring
   - [MySQL](MySQL)
@@ -9,7 +8,7 @@
   - Redis
   - MonogoDB
   - Message Queue
-  - 
+  - [Linux](Linux)
 
 - 其他
   - [Git](Git)
