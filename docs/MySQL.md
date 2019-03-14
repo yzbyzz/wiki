@@ -59,22 +59,26 @@ yum repolist all | grep mysql
   - 使用 yum-config-manager
   - 使用 dnf config-manager
   - 修改 `/etc/yum.repos.d/mysql-community.repo` 文件
+  
 - 安装
 ```
- yum install mysql-community-server
- ```
- - 控制
- ```
- systemctl status/start/stop/restart mysqld
- ```
- - 首次登录（启动后查看 `/var/log/mysqld.log` 查看临时密码）
- ```
- mysql -uroot -p
- ```
- - 修改密码
- ```
- ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';
- ```
+yum install mysql-community-server
+```
+
+- 控制
+```
+systemctl status/start/stop/restart mysqld
+```
+
+- 首次登录（启动后查看 `/var/log/mysqld.log` 查看临时密码）
+```
+mysql -uroot -p
+```
+
+- 修改密码
+```
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';
+```
 
 ## 参考
 - [windows下安装Mysql—图文详解](https://www.cnblogs.com/reyinever/p/8551977.html)
