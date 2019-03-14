@@ -42,7 +42,41 @@ flush privileges;
 ### macOS
 
 ### Linux
+> 以 Centos 为例
 
+- 到 [MySQL yum repo](https://dev.mysql.com/downloads/repo/yum/) 下载相应的RPM 包
+- 安装 RPM 包
+```
+rpm -Uvh platform-and-version-specific-package-name.rpm
+# eg
+rpm -Uvh mysql80-community-release-el7-2.noarch.rpm
+```
+- 查看可安装的 MySQL 版本
+```
+yum repolist all | grep mysql
+```
+- 选择需要安装的版本（如果没有选择，默认安装最新版本）
+  - 使用 yum-config-manager
+  - 使用 dnf config-manager
+  - 修改 `/etc/yum.repos.d/mysql-community.repo` 文件
+- 安装
+```
+ yum install mysql-community-server
+ ```
+ - 控制
+ ```
+ systemctl status/start/stop/restart mysqld
+ ```
+ - 首次登录（启动后查看 `/var/log/mysqld.log` 查看临时密码）
+ ```
+ mysql -uroot -p
+ ```
+ - 修改密码
+ ```
+ ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';
+ ```
 
 ## 参考
 - [windows下安装Mysql—图文详解](https://www.cnblogs.com/reyinever/p/8551977.html)
+- [Steps for a Fresh Installation of MySQL](https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/#repo-qg-yum-fresh-install)
+- 
