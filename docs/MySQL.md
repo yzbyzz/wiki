@@ -80,6 +80,36 @@ mysql -uroot -p
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';
 ```
 
+## 配置
+
+### 配置文件
+
+#### Windows
+通过 `SELECT @@basedir` 命令查找
+
+#### Linux
+```
+/etc/my.ini
+```
+
+### 密码策略
+- MySQL 5.7-
+```
+select @@validate_password_policy;
+select @@validate_password_length;
+
+set global validate_password_policy=0;
+set global validate_password_length=4;
+```
+
+- MySQL 8+
+```
+SHOW VARIABLES LIKE 'validate_password%';
+
+set global validate_password.policy=0;
+set global validate_password.length=4;
+```
+
 ## 参考
 - [windows下安装Mysql—图文详解](https://www.cnblogs.com/reyinever/p/8551977.html)
 - [Steps for a Fresh Installation of MySQL](https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/#repo-qg-yum-fresh-install)
