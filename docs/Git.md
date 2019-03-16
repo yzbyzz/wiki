@@ -8,6 +8,13 @@
 git config --show-origin --get user.email
 ```
 
+### 处理不同平台 CRLF
+
+- 使用 `.gitattributes`
+- Ref [GitHub - Dealing with line endings](https://help.github.com/en/articles/dealing-with-line-endings)
+- Ref [What's the best CRLF (carriage return, line feed) handling strategy with Git? ](https://stackoverflow.com/questions/170961/whats-the-best-crlf-carriage-return-line-feed-handling-strategy-with-git)
+- 记得要对相应文件执行 `git add` 后才生效
+
 ### 免密操作
 
 #### SSH
