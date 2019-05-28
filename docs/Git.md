@@ -240,3 +240,14 @@ git clean -f -x
 git clean -fx
 ```
 
+### git 出现错误
+```
+ git status
+error: bad signature
+fatal: index file corrupt
+```
+解决办法：
+
+- 进入到工程目录下: cd /path/to/dir
+- 删除或重命名 .git/index 文件： rm -f .git/index 或 mv .git/index{,.bak}
+- 重建 .git/index : git read-tree 或者直接 git reset
