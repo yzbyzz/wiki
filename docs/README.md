@@ -4,7 +4,7 @@
 
 ~~使用 [docsify](https://github.com/docsifyjs/docsify) 搭建。~~
 
-改成使用[语雀](https://www.yuque.com/yzbyzz/technology)。
+**改成使用[语雀](https://www.yuque.com/yzbyzz/technology)。**
 
 ## docsify 常用命令
 
