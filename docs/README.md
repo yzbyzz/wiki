@@ -2,7 +2,9 @@
 
 根据 [developer-roadmap](https://github.com/kamranahmedse/developer-roadmap) 给自己立一个 Flag。
 
-使用 [docsify](https://github.com/docsifyjs/docsify) 搭建。
+~~使用 [docsify](https://github.com/docsifyjs/docsify) 搭建。~~
+
+改成使用[语雀](https://www.yuque.com/yzbyzz/technology)。
 
 ## docsify 常用命令
 
